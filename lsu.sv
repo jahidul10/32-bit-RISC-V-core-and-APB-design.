@@ -1,0 +1,1 @@
+module lsu(	input logic [2:0] funct3,	output logic LoadType, StoreType);	always_comb		case(funct3)			3'b000: {LoadType, StoreType} = 2'b01;			3'b010: {LoadType, StoreType} = 2'b00;			3'b100: {LoadType, StoreType} = 2'b1x;			default: {LoadType, StoreType} = 2'bxx;		endcaseendmodule
